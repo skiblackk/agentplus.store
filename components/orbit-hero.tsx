@@ -110,7 +110,8 @@ export function OrbitHero() {
             transition={{ duration: 0.6 }}
             className="flex justify-center"
           >
-            <div className="glass-card px-8 py-3 w-fit border-primary/40 bg-primary/10">
+            <div className="glass-card px-8 py-3 w-fit border-primary/40 bg-primary/10 flex items-center gap-3">
+              <img src="/agentpluslogo.jpg" alt="" className="w-8 h-8 rounded-lg object-cover" />
               <p className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary text-transparent bg-clip-text">
                 AgentPlus.store
               </p>

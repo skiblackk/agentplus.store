@@ -142,9 +142,6 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div style={{ textAlign: 'center', paddingTop: '20px' }}>
-          <img src="/agentpluslogo.jpg" alt="AgentPlus Logo" style={{ width: '150px', height: 'auto' }} />
-        </div>
         <Suspense fallback={null}>{children}</Suspense>
         <SpeedInsights />
       </body>

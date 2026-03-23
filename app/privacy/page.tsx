@@ -10,7 +10,7 @@ export default function PrivacyPage() {
       <nav className="sticky top-0 z-50 border-b border-primary/10 bg-background/80 backdrop-blur-xl glass-effect">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img src="/agentplus-icon.jpg" alt="AgentPlus Logo" className="w-8 h-8 rounded-lg object-cover" />
+            <img src="/agentpluslogo.jpg" alt="" className="w-8 h-8 rounded-lg object-cover" />
             <span className="text-lg font-bold text-foreground">AgentPlus</span>
           </Link>
           <Link href="/" className="text-primary hover:text-primary/80 transition-colors font-semibold flex items-center gap-2">
