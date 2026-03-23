@@ -44,6 +44,10 @@ export const metadata: Metadata = {
     title: "AgentPlus.ai - AI Agents That Work 24/7",
     description: "AI agents that work for your business around the clock.",
   },
+  icons: {
+    icon: "/agentplus.logo.jpg",
+    apple: "/agentplus.logo.jpg",
+  },
     generator: 'v0.app'
 }
 
