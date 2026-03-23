@@ -53,7 +53,7 @@ export default function Testimonials() {
             >
               <div className="flex items-center gap-4 mb-4">
                 <img
-                  src={testimonial.image || "/placeholder.svg"}
+                  src={testimonial.image || "/agentplus.logo.jpg"}
                   alt={testimonial.name}
                   className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-2 border-purple-500/30"
                 />

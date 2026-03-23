@@ -33,7 +33,7 @@ export default function Home() {
           <div className="flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <img
-                src="/agentpluslogo.jpg"
+                src="/agentplus.logo.jpg"
                 alt=""
                 className="w-8 h-8 rounded-lg object-cover"
               />
@@ -162,7 +162,7 @@ export default function Home() {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-2 mb-4">
-                <img src="/agentpluslogo.jpg" alt="" className="w-8 h-8 rounded-lg object-cover" />
+                <img src="/agentplus.logo.jpg" alt="" className="w-8 h-8 rounded-lg object-cover" />
                 <span className="font-bold text-foreground">AgentPlus</span>
               </div>
               <p className="text-sm text-muted-foreground">AI agents that work 24/7 for your business.</p>

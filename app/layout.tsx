@@ -64,7 +64,7 @@ export default function RootLayout({
               name: "Agent Plus",
               alternateName: "SmartSync Associates",
               url: "https://agentplus.store",
-              logo: "https://agentplus.store/agentplus-logo.png",
+              logo: "https://agentplus.store/agentplus.logo.jpg",
               description: "AI agent solutions for business automation and transformation",
               founder: {
                 "@type": "Person",
