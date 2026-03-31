@@ -56,44 +56,72 @@ export function OrbitHero() {
         <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_24%,rgba(92,193,174,.15)_25%,rgba(92,193,174,.15)_26%,transparent_27%,transparent_74%,rgba(92,193,174,.15)_75%,rgba(92,193,174,.15)_76%,transparent_77%,transparent),linear-gradient(90deg,transparent_24%,rgba(92,193,174,.15)_25%,rgba(92,193,174,.15)_26%,transparent_27%,transparent_74%,rgba(92,193,174,.15)_75%,rgba(92,193,174,.15)_76%,transparent_77%,transparent)] bg-[length:50px_50px]" />
       </div>
 
-      {/* Dynamic floating orbs with mouse interaction */}
+      {/* Premium 3D Orbs - Floating Glass Spheres */}
+      {/* Main Hero Orb - Center */}
       <motion.div
         animate={{
-          y: [0, -30, 0],
-          x: [0, 15, 0],
+          y: [0, -40, 0],
+          x: [0, 20, 0],
+          rotate: [0, 360],
         }}
-        transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
         style={{
-          x: mousePosition.x * 0.02,
-          y: mousePosition.y * 0.02,
+          x: mousePosition.x * 0.03,
+          y: mousePosition.y * 0.03,
           zIndex: 4,
         }}
-        className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-primary/30 to-primary/10 rounded-full blur-3xl"
-      />
+        className="absolute top-1/3 right-1/4 w-96 h-96 bg-gradient-to-br from-primary/40 via-primary/20 to-transparent rounded-full blur-2xl shadow-2xl"
+      >
+        {/* Inner glow */}
+        <motion.div
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.6, 0.9, 0.6],
+          }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute inset-0 bg-gradient-to-t from-primary/30 to-primary/0 rounded-full blur-xl"
+        />
+      </motion.div>
+
+      {/* Secondary Orb - Bottom Left */}
       <motion.div
         animate={{
-          y: [0, 30, 0],
-          x: [0, -15, 0],
+          y: [0, 50, 0],
+          x: [0, -20, 0],
+          rotate: [360, 0],
         }}
-        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         style={{
-          x: mousePosition.x * -0.01,
-          y: mousePosition.y * -0.02,
+          x: mousePosition.x * -0.02,
+          y: mousePosition.y * -0.03,
           zIndex: 4,
         }}
-        className="absolute bottom-10 left-10 w-80 h-80 bg-gradient-to-br from-primary/25 to-primary/5 rounded-full blur-3xl"
+        className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-primary/35 to-transparent rounded-full blur-2xl shadow-2xl"
       />
 
-      {/* Extra accent orb */}
+      {/* Accent Orb - Top Left */}
       <motion.div
         style={{ zIndex: 4 }}
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
+          scale: [1, 1.25, 1],
+          opacity: [0.3, 0.5, 0.3],
+          rotate: [0, -360],
         }}
-        transition={{ duration: 6, repeat: Infinity }}
-        className="absolute top-1/3 left-1/4 w-64 h-64 bg-primary/15 rounded-full blur-3xl"
+        transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
+        className="absolute top-1/4 left-1/3 w-72 h-72 bg-gradient-to-br from-primary/25 to-transparent rounded-full blur-3xl"
       />
+
+      {/* Premium Grid Pattern with Animation */}
+      <motion.div
+        animate={{
+          opacity: [0.1, 0.2, 0.1],
+        }}
+        transition={{ duration: 4, repeat: Infinity }}
+        className="absolute inset-0 opacity-15"
+        style={{ zIndex: 3 }}
+      >
+        <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_24%,rgba(92,193,174,.2)_25%,rgba(92,193,174,.2)_26%,transparent_27%,transparent_74%,rgba(92,193,174,.2)_75%,rgba(92,193,174,.2)_76%,transparent_77%,transparent),linear-gradient(90deg,transparent_24%,rgba(92,193,174,.2)_25%,rgba(92,193,174,.2)_26%,transparent_27%,transparent_74%,rgba(92,193,174,.2)_75%,rgba(92,193,174,.2)_76%,transparent_77%,transparent)] bg-[length:40px_40px]" />
+      </motion.div>
 
       {/* Content */}
       <div className="max-w-4xl mx-auto relative" style={{ zIndex: 10 }}>
@@ -147,30 +175,44 @@ export function OrbitHero() {
             </motion.div>
           </motion.div>
 
-          {/* Main Headline with enhanced animation */}
+          {/* Main Headline with Premium 3D Animation */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="space-y-4"
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-tight">
               <motion.span
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.2 }}
+                transition={{ duration: 0.7, delay: 0.2, type: 'spring', stiffness: 100 }}
                 className="block"
+                style={{
+                  textShadow: '0 10px 30px rgba(92, 193, 174, 0.2)',
+                }}
               >
                 AI Agents
               </motion.span>
               <motion.span
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, delay: 0.3 }}
+                transition={{ duration: 0.7, delay: 0.3, type: 'spring', stiffness: 100 }}
                 className="block bg-gradient-to-r from-primary via-primary/80 to-primary text-transparent bg-clip-text mt-2"
+                style={{
+                  filter: 'drop-shadow(0 10px 20px rgba(92, 193, 174, 0.15))',
+                }}
               >
                 That Never Sleep
               </motion.span>
             </h1>
+            {/* Animated underline */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="h-1 w-20 bg-gradient-to-r from-primary to-transparent mx-auto rounded-full"
+            />
           </motion.div>
 
           {/* Subheadline */}
@@ -183,49 +225,65 @@ export function OrbitHero() {
             24/7 AI agents handling customer messages, capturing leads, and providing support—all while you focus on growing your business.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* Premium CTA Buttons with 3D Effects */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center pt-8"
           >
+            {/* Primary CTA Button */}
             <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.08, y: -4 }}
+              whileTap={{ scale: 0.96 }}
               className="w-full sm:w-auto"
             >
               <motion.div
                 animate={{
                   boxShadow: [
-                    '0 0 20px rgba(92, 193, 174, 0.2)',
-                    '0 0 40px rgba(92, 193, 174, 0.4)',
-                    '0 0 20px rgba(92, 193, 174, 0.2)',
+                    '0 10px 30px rgba(92, 193, 174, 0.25)',
+                    '0 20px 50px rgba(92, 193, 174, 0.4)',
+                    '0 10px 30px rgba(92, 193, 174, 0.25)',
                   ],
                 }}
                 transition={{ duration: 3, repeat: Infinity }}
+                className="rounded-lg"
               >
                 <Button
                   onClick={sendToWhatsApp}
-                  className="w-full sm:w-auto px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg shadow-lg"
+                  className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground font-semibold rounded-lg shadow-2xl transform transition-all"
                 >
-                  Start Free <ArrowRight className="ml-2 w-4 h-4" />
+                  <Sparkles className="w-4 h-4 mr-2" />
+                  Start Free Trial <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </motion.div>
             </motion.div>
+
+            {/* Secondary CTA Button */}
             <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.08, y: -4 }}
+              whileTap={{ scale: 0.96 }}
               className="w-full sm:w-auto"
             >
-              <Button
-                onClick={sendToWhatsApp}
-                variant="outline"
-                className="w-full sm:w-auto px-8 py-3 border-2 border-primary/50 text-primary font-semibold rounded-lg hover:bg-primary/10 hover:border-primary/80 transition-all bg-transparent"
+              <motion.div
+                className="rounded-lg"
+                animate={{
+                  boxShadow: [
+                    '0 5px 15px rgba(92, 193, 174, 0.1)',
+                    '0 10px 25px rgba(92, 193, 174, 0.2)',
+                    '0 5px 15px rgba(92, 193, 174, 0.1)',
+                  ],
+                }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
               >
-                <MessageSquare className="w-4 h-4 mr-2" />
-                Chat Now
-              </Button>
+                <Button
+                  onClick={sendToWhatsApp}
+                  className="w-full sm:w-auto px-8 py-4 border-2 border-primary/50 text-primary font-semibold rounded-lg hover:bg-primary/10 hover:border-primary/80 transition-all bg-primary/5 backdrop-blur-sm"
+                >
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Chat Now
+                </Button>
+              </motion.div>
             </motion.div>
           </motion.div>
 
