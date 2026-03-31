@@ -45,8 +45,8 @@ export function OrbitHero() {
         />
       </video>
 
-      {/* Dark overlay for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/50 via-background/40 to-background/50" style={{ zIndex: 1 }} />
+      {/* Dark overlay for text readability - lighter for Spline visibility */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/30 via-background/20 to-background/30" style={{ zIndex: 1 }} />
 
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/3" style={{ zIndex: 2 }} />
@@ -122,6 +122,18 @@ export function OrbitHero() {
       >
         <div className="absolute inset-0 bg-[linear-gradient(0deg,transparent_24%,rgba(92,193,174,.2)_25%,rgba(92,193,174,.2)_26%,transparent_27%,transparent_74%,rgba(92,193,174,.2)_75%,rgba(92,193,174,.2)_76%,transparent_77%,transparent),linear-gradient(90deg,transparent_24%,rgba(92,193,174,.2)_25%,rgba(92,193,174,.2)_26%,transparent_27%,transparent_74%,rgba(92,193,174,.2)_75%,rgba(92,193,174,.2)_76%,transparent_77%,transparent)] bg-[length:40px_40px]" />
       </motion.div>
+
+      {/* Spline 3D Model Embed */}
+      <div className="absolute inset-0 w-full h-full" style={{ zIndex: 5 }}>
+        <iframe
+          src="https://my.spline.design/agentplus3d-c17e8e9e8f984d1fa58b7d95c35ede45/"
+          frameBorder="0"
+          width="100%"
+          height="100%"
+          className="w-full h-full"
+          style={{ pointerEvents: 'auto' }}
+        ></iframe>
+      </div>
 
       {/* Content */}
       <div className="max-w-4xl mx-auto relative" style={{ zIndex: 10 }}>
