@@ -10,6 +10,7 @@ import { AgentPlusTestimonials } from '@/components/agentplus-testimonials'
 import { PricingSectionNew } from '@/components/pricing-section-new'
 import { TrustBanner } from '@/components/trust-banner'
 import { AgentPlusTimeline } from '@/components/agentplus-timeline'
+import GlobeFeatureSection from '@/components/ui/globe-feature-section'
 import { MessageSquare } from 'lucide-react'
 
 const whatsappNumber = '254759256514'
@@ -100,55 +101,10 @@ export default function Home() {
         <PricingSectionNew />
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-20 sm:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-primary/5" />
-        <div className="mx-auto max-w-4xl relative z-10 text-center space-y-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground"
-          >
-            Ready to Transform Your Business?
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg text-muted-foreground"
-          >
-            Join hundreds of businesses using AgentPlus to automate customer interactions and boost sales.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
-          >
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                onClick={sendToWhatsApp}
-                className="px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg shadow-lg glow-teal"
-              >
-                Start Your Free Trial
-              </Button>
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                onClick={sendToWhatsApp}
-                variant="outline"
-                className="px-8 py-3 border-2 border-primary/50 text-primary font-semibold rounded-lg hover:bg-primary/10 hover:border-primary/80 transition-all bg-transparent"
-              >
-                Schedule Demo
-              </Button>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+      {/* Globe Feature Section */}
+      <div className="container mx-auto px-4">
+        <GlobeFeatureSection />
+      </div>
 
       {/* Footer */}
       <footer className="border-t border-primary/10 bg-background/50 px-4 py-12 sm:px-6 lg:px-8">
