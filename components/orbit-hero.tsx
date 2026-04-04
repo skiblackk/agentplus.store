@@ -48,7 +48,7 @@ export function OrbitHero() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex justify-start"
+                className="flex justify-start will-change-transform"
               >
                 <div className="glass-card px-6 py-2 w-fit border-white/20 bg-white/5 flex items-center gap-3">
                   <img src="/agentplus.logo.jpg" alt="" className="w-6 h-6 rounded-lg object-cover" />
