@@ -12,26 +12,26 @@
   :root {
     --font-sans: var(--font-geist-sans);
     --font-mono: var(--font-geist-mono);
-    /* Custom AgentPlus color palette */
+    /* Custom AgentPlus color palette - Neutral/Apple aesthetic */
     --background: 220 20% 4%;
     --foreground: 210 20% 92%;
     --card: 220 18% 8%;
     --card-foreground: 210 20% 92%;
     --popover: 220 18% 8%;
     --popover-foreground: 210 20% 92%;
-    --primary: 174 72% 52%;
+    --primary: 0 0% 100%;
     --primary-foreground: 220 20% 4%;
-    --secondary: 174 72% 52%;
+    --secondary: 0 0% 100%;
     --secondary-foreground: 220 20% 4%;
     --muted: 215 14% 50%;
     --muted-foreground: 210 20% 92%;
-    --accent: 174 72% 52%;
+    --accent: 0 0% 100%;
     --accent-foreground: 220 20% 4%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 220 20% 4%;
     --border: 220 14% 16%;
     --input: 220 18% 10%;
-    --ring: 174 72% 52%;
+    --ring: 0 0% 100%;
     --radius: 0.75rem;
   }
 }
@@ -62,15 +62,15 @@
     @apply bg-white/5 backdrop-blur-md border border-white/20 rounded-lg;
   }
   
-  .glow-teal {
-    box-shadow: 0 0 30px rgba(92, 193, 174, 0.4);
+  .glow-white {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
   }
   
-  .glow-teal-sm {
-    box-shadow: 0 0 20px rgba(92, 193, 174, 0.25);
+  .glow-white-sm {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
   }
   
-  .text-teal {
+  .text-white {
     @apply text-primary;
   }
 }
