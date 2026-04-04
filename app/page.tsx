@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { OrbitHero } from '@/components/orbit-hero'
 import { OrbitFeatures } from '@/components/orbit-features'
 import { OrbitMetrics } from '@/components/orbit-metrics'
-import { TestimonialsSection } from '@/components/testimonials-section'
+import { AgentPlusTestimonials } from '@/components/agentplus-testimonials'
 import { PricingSectionNew } from '@/components/pricing-section-new'
 import { TrustBanner } from '@/components/trust-banner'
 import { WhyAgentPlus } from '@/components/why-agentplus'
@@ -92,7 +92,7 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section id="testimonials">
-        <TestimonialsSection />
+        <AgentPlusTestimonials />
       </section>
 
       {/* Pricing Section */}
