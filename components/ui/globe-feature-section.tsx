@@ -49,12 +49,12 @@ const GLOBE_CONFIG: COBEOptions = {
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
-  dark: 0,
-  diffuse: 0.4,
+  dark: 1,
+  diffuse: 1.2,
   mapSamples: 16000,
-  mapBrightness: 1.2,
+  mapBrightness: 6,
   baseColor: [1, 1, 1],
-  markerColor: [0.1, 0.1, 0.1],
+  markerColor: [1, 1, 1],
   glowColor: [1, 1, 1],
   markers: [
     { location: [1.2921, 36.8219], size: 0.1 }, // Nairobi
@@ -77,11 +77,12 @@ export function Globe({
   config?: COBEOptions
 }) {
   const phiRef = useRef(0)
-  let width = 0
+  const widthRef = useRef(0)
+  const rRef = useRef(0)
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const pointerInteracting = useRef<number | null>(null)
   const pointerInteractionMovement = useRef(0)
-  const [r, setR] = useState(0)
+  const [_, setR] = useState(0) // Still keep state to trigger re-renders if needed, but use ref for callback
 
   const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value
@@ -94,6 +95,7 @@ export function Globe({
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current
       pointerInteractionMovement.current = delta
+      rRef.current = delta / 200
       setR(delta / 200)
     }
   }
@@ -103,16 +105,16 @@ export function Globe({
       if (!pointerInteracting.current) {
         phiRef.current += 0.005
       }
-      state.phi = phiRef.current + r
-      state.width = width * 2
-      state.height = width * 2
+      state.phi = phiRef.current + rRef.current
+      state.width = widthRef.current * 2
+      state.height = widthRef.current * 2
     },
-    [r],
+    [],
   )
 
   const onResize = () => {
     if (canvasRef.current) {
-      width = canvasRef.current.offsetWidth
+      widthRef.current = canvasRef.current.offsetWidth
     }
   }
 
@@ -122,8 +124,8 @@ export function Globe({
 
     const globe = createGlobe(canvasRef.current!, {
       ...config,
-      width: width * 2,
-      height: width * 2,
+      width: widthRef.current * 2,
+      height: widthRef.current * 2,
       onRender,
     })
 

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
 import { OrbitHero } from '@/components/orbit-hero'
 import { OrbitFeatures } from '@/components/orbit-features'
-import { OrbitMetrics } from '@/components/orbit-metrics'
+import { AgentPlusAnalytics } from '@/components/agentplus-analytics'
 import { AgentPlusTestimonials } from '@/components/agentplus-testimonials'
 import { PricingSectionNew } from '@/components/pricing-section-new'
 import { TrustBanner } from '@/components/trust-banner'
@@ -83,7 +83,7 @@ export default function Home() {
 
       {/* Metrics Section */}
       <section id="metrics">
-        <OrbitMetrics />
+        <AgentPlusAnalytics />
       </section>
 
       {/* Why AgentPlus Section */}
