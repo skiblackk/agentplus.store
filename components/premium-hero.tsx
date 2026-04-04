@@ -78,7 +78,7 @@ export function PremiumHero({ onWhatsApp }: PremiumHeroProps) {
                 size="lg"
                 className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                Start Free <ArrowRight className="ml-2 h-4 w-4" />
+                Get Started <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </motion.div>
             <motion.div
@@ -98,7 +98,7 @@ export function PremiumHero({ onWhatsApp }: PremiumHeroProps) {
 
           {/* Social Proof */}
           <motion.p variants={itemVariants} className="mt-8 text-center text-sm text-gray-500">
-            No credit card required • 7-day free trial • Full setup by our team
+            No credit card required • Personalized Demo • Full setup by our team
           </motion.p>
         </motion.div>
       </div>

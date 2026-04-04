@@ -28,7 +28,7 @@ export default function Featured_05() {
             onClick={sendToWhatsApp}
             className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-6 text-base font-semibold text-black transition hover:bg-neutral-200 shadow-xl"
           >
-            Start Your Free Trial <ArrowRight className="h-5 w-5" />
+            Get Started Now <ArrowRight className="h-5 w-5" />
           </Button>
         </div>
         <div className="relative h-[300px] md:h-[400px] w-full max-w-xl">
@@ -49,13 +49,13 @@ const GLOBE_CONFIG: COBEOptions = {
   devicePixelRatio: 2,
   phi: 0,
   theta: 0.3,
-  dark: 1,
+  dark: 0,
   diffuse: 0.4,
   mapSamples: 16000,
   mapBrightness: 1.2,
-  baseColor: [0.1, 0.1, 0.1],
-  markerColor: [1, 1, 1],
-  glowColor: [0.2, 0.2, 0.2],
+  baseColor: [1, 1, 1],
+  markerColor: [0.1, 0.1, 0.1],
+  glowColor: [1, 1, 1],
   markers: [
     { location: [1.2921, 36.8219], size: 0.1 }, // Nairobi
     { location: [40.7128, -74.006], size: 0.08 }, // NY
@@ -76,7 +76,7 @@ export function Globe({
   className?: string
   config?: COBEOptions
 }) {
-  let phi = 0
+  const phiRef = useRef(0)
   let width = 0
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const pointerInteracting = useRef<number | null>(null)
@@ -100,8 +100,10 @@ export function Globe({
 
   const onRender = useCallback(
     (state: Record<string, any>) => {
-      if (!pointerInteracting.current) phi += 0.005
-      state.phi = phi + r
+      if (!pointerInteracting.current) {
+        phiRef.current += 0.005
+      }
+      state.phi = phiRef.current + r
       state.width = width * 2
       state.height = width * 2
     },

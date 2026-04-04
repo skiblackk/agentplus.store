@@ -26,7 +26,7 @@ const testimonials = [
     role: "Customer Success Lead",
     company: "CloudServe Inc",
     content:
-      "Agent Plus handles our tier-1 support queries perfectly. Our human team can now focus on complex issues. The 7-minute free trial convinced us immediately - it just works.",
+      "Agent Plus handles our tier-1 support queries perfectly. Our human team can now focus on complex issues. The personalized demo convinced us immediately - it just works.",
     rating: 5,
     image: "/professional-woman-customer-service.jpg",
   },

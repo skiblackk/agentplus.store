@@ -31,8 +31,8 @@ const BenefitsSection = () => {
     },
     {
       icon: CheckCircle2,
-      title: "100% Money-Back Guarantee",
-      description: "Try AgentPlus risk-free for 30 days. No questions asked.",
+      title: "100% Satisfaction Guarantee",
+      description: "We work with you until your AI agent is perfect. No hidden fees.",
     },
   ]
 

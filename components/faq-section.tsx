@@ -20,7 +20,7 @@ const faqs = [
     id: 3,
     question: "Is AgentPlus free to use?",
     answer:
-      "Yes! AgentPlus offers a free plan so you can start exploring its features before upgrading to unlock advanced tools.",
+      "AgentPlus offers personalized solutions tailored to your business needs. Contact us for a demo and to discuss the best plan for you.",
   },
   {
     id: 4,

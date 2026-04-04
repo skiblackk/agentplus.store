@@ -337,7 +337,7 @@ export default function AgentDemo() {
             <DialogHeader>
               <DialogTitle className="text-2xl">Continue with Agent Plus</DialogTitle>
               <DialogDescription className="text-gray-400">
-                Your free trial has ended. Choose an option to continue:
+                Your demo session has ended. Choose an option to continue:
               </DialogDescription>
             </DialogHeader>
 
