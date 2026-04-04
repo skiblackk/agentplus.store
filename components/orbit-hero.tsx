@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useMousePosition } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle2, Sparkles, MessageSquare } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useEffect, useState } from 'react'
