@@ -9,7 +9,7 @@ import { OrbitMetrics } from '@/components/orbit-metrics'
 import { AgentPlusTestimonials } from '@/components/agentplus-testimonials'
 import { PricingSectionNew } from '@/components/pricing-section-new'
 import { TrustBanner } from '@/components/trust-banner'
-import { WhyAgentPlus } from '@/components/why-agentplus'
+import { AgentPlusTimeline } from '@/components/agentplus-timeline'
 import { MessageSquare } from 'lucide-react'
 
 const whatsappNumber = '254759256514'
@@ -87,7 +87,7 @@ export default function Home() {
 
       {/* Why AgentPlus Section */}
       <section>
-        <WhyAgentPlus />
+        <AgentPlusTimeline />
       </section>
 
       {/* Testimonials Section */}

@@ -225,6 +225,50 @@
     animation: shimmer 2s infinite;
   }
   
+  /* Orbital Timeline Specific Animations */
+  @keyframes ping-slow {
+    75%, 100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+
+  .animate-ping-slow {
+    animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+  }
+
+  .bg-black\/90 {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .bg-white\/80 {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .text-white\/70 {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .text-white\/80 {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .border-white\/10 {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .border-white\/20 {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .border-white\/30 {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  
   /* Delay utilities for staggered animations */
   .animation-delay-100 { animation-delay: 0.1s; }
   .animation-delay-200 { animation-delay: 0.2s; }
